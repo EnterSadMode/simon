@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .radio {
+    display: block;
+  }
+  
+  .navigation {
+    margin-left: 100px;
+  }
+  
+  .controller {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .controller__button--red.active, .controller__button--red:active {
+    background: red;
+  }
+  .controller__button--purple.active, .controller__button--purple:active {
+    background: purple;
+  }
+  .controller__button--yellow.active, .controller__button--yellow:active {
+    background: rgb(255, 251, 0);
+  }
+  .controller__button--green.active, .controller__button--green:active {
+    background: green;
+  }

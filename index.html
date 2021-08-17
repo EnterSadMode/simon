@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Simon</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="content">
+        <div class="controller">
+          <button class="controller__button controller__button--red" @click="handleClickButton(1)" :class="{ active: active === 1 }">
+            1
+          </button>
+          <button class="controller__button controller__button--purple" @click="handleClickButton(2)" :class="{ active: active === 2 }">
+            2
+          </button>
+          <button class="controller__button controller__button--green" @click="handleClickButton(3)" :class="{ active: active === 3 }">
+            3
+          </button>
+          <button class="controller__button controller__button--yellow" @click="handleClickButton(4)" :class="{ active: active === 4 }">
+            4
+          </button>
+        </div>
+        <nav class="navigation">
+          <p><b>Round: </b> {{array.length}}</p>
+          <button class="button" @click="handleClickNextRound">Старт</button>
+          <form class="form">
+            <label class="radio">
+              <input type="radio" name="lvl" @input="handleChangeLevel" value="0" checked />
+              Легкий
+            </label>
+            <label class="radio">
+              <input type="radio" name="lvl" @input="handleChangeLevel" value="1" />
+              Средний
+            </label>
+            <label class="radio">
+              <input type="radio" name="lvl" @input="handleChangeLevel" value="2" />
+              Сложный
+            </label>
+          </form>
+        </nav>
+      </div>
+      <audio src="sound/1.mp3" ref="soundFirstRef"></audio>
+      <audio src="sound/2.mp3" ref="soundSecondRef"></audio>
+      <audio src="sound/3.mp3" ref="soundThirdRef"></audio>
+      <audio src="sound/4.mp3" ref="soundFourthRef"></audio>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
